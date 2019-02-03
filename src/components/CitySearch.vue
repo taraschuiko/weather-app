@@ -15,6 +15,8 @@ export default {
   },
   methods: {
     loadWeather() {
+      this.newCity =
+        this.newCity.charAt(0).toUpperCase() + this.newCity.slice(1);
       this.$store.dispatch("loadWeather", this.newCity);
       this.newCity = "";
     }

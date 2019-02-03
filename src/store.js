@@ -8,17 +8,18 @@ const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?${APP_ID}`
 
 export default new Vuex.Store({
   state: {
-    city: "London",
+    city: "",
     units: "metric",
     weather: {
       main: "",
-      temp: 0,
-      windSpeed: 0
+      temp: null,
+      windSpeed: null
     }
   },
   mutations: {
     setCity(state, city) {
       state.city = city;
+      localStorage.city = city;
     },
     setUnits(state, units) {
       state.units = units;
@@ -35,7 +36,7 @@ export default new Vuex.Store({
         .then(r => r.json())
         .then(json => weather = {
           main: json.weather[0].main,
-          temp: json.main.temp,
+          temp: Math.round(json.main.temp),
           windSpeed: json.wind.speed
         })
         .then(() => context.commit("setWeather", weather))
