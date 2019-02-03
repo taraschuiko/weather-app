@@ -3,18 +3,21 @@
     <h1>Weather Vue.js App</h1>
     <CitySearch></CitySearch>
     <Weather></Weather>
+    <UnitsChange></UnitsChange>
   </div>
 </template>
 
 <script>
 import CitySearch from "./components/CitySearch";
 import Weather from "./components/Weather";
+import UnitsChange from "./components/UnitsChange";
 
 export default {
   name: "app",
   components: {
     CitySearch,
-    Weather
+    Weather,
+    UnitsChange
   },
   beforeMount() {
     if (localStorage.city) {
