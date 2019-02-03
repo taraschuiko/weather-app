@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" placeholder="Search..." v-model="newCity">
+    <input type="text" placeholder="Search..." v-model="newCity" @keyup.enter="loadWeather">
     <button @click="loadWeather">Get Weather</button>
   </div>
 </template>
