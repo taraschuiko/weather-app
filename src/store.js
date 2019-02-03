@@ -30,23 +30,19 @@ export default new Vuex.Store({
   },
   actions: {
     loadWeather(context, city) {
-      context.commit("setCity", city);
-      let weather = {};
-      fetch(BASE_URL + "&q=" + this.state.city + "&units=" + this.state.units)
+      fetch(BASE_URL + "&q=" + city + "&units=" + this.state.units)
         .then(r => r.json())
-        .then(json => {
-          weather = {
-            main: json.weather[0].main,
-            temp: Math.round(json.main.temp),
-            windSpeed: json.wind.speed
-          }
-          return json;
-        })
         .then(json => {
           context.commit("setCity", json.name)
           return json;
         })
-        .then(() => context.commit("setWeather", weather))
+        .then(json => {
+          context.commit("setWeather", {
+            main: json.weather[0].main,
+            temp: Math.round(json.main.temp),
+            windSpeed: json.wind.speed
+          })
+        })
     }
   }
 })
