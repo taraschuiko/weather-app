@@ -16,8 +16,6 @@ export default {
   methods: {
     loadWeather() {
       if (this.newCity.trim().length != 0) {
-        this.newCity =
-          this.newCity.charAt(0).toUpperCase() + this.newCity.slice(1);
         this.$store.dispatch("loadWeather", this.newCity);
         this.newCity = "";
       }
@@ -32,7 +30,6 @@ button {
   font-size: 16px;
   padding: 2px 6px;
   border: 1px solid #ccc;
-  cursor: pointer;
 }
 
 input {
@@ -40,6 +37,7 @@ input {
 }
 
 button {
-  background: transparent;
+  background: #fff;
+  cursor: pointer;
 }
 </style>
