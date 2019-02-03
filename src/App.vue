@@ -19,8 +19,8 @@ export default {
     Weather,
     UnitsChange
   },
-  beforeMount() {
-    if (localStorage.city) {
+  mounted() {
+    if (localStorage.city.length != 0) {
       this.$store.dispatch("loadWeather", localStorage.city);
     }
   }

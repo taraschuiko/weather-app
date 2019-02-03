@@ -2,6 +2,7 @@
   <div>
     <input type="text" placeholder="Search..." v-model="newCity" @keyup.enter="loadWeather">
     <button @click="loadWeather">Get Weather</button>
+    <p class="error" v-if="this.$store.state.error">{{this.$store.state.error}}</p>
   </div>
 </template>
 
