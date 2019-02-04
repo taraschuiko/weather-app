@@ -26,7 +26,8 @@ export default {
     background: #ccc;
     border: 1px solid #ccc;
     border-radius: 0;
-    font-size: 12px;
+    font-size: 14px;
+    padding: 2px 6px;
     outline: 0;
     cursor: pointer;
   }
