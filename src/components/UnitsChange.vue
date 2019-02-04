@@ -30,6 +30,7 @@ export default {
     padding: 2px 6px;
     outline: 0;
     cursor: pointer;
+    margin-top: 8px;
   }
 
   button.active {

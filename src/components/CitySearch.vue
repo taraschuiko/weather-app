@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="city-search">
     <input type="text" placeholder="Search..." v-model="newCity" @keyup.enter="loadWeather">
     <button @click="loadWeather">Search</button>
     <p class="error" v-if="this.$store.state.error">{{this.$store.state.error}}</p>
@@ -26,6 +26,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.city-search {
+  margin-top: 8px;
+}
+
 input,
 button {
   font-size: 16px;

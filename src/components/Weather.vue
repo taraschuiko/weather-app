@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .weather {
-  margin-top: 12px;
+  margin-top: 8px;
 
   p {
     margin: 0;
