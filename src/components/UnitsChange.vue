@@ -24,6 +24,7 @@ export default {
 .units-change {
   button {
     background: #ccc;
+    color: #2c3e50;
     border: 1px solid #ccc;
     border-radius: 0;
     font-size: 14px;

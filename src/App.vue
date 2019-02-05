@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="app-top">
+      <img src="./assets/cloud.png" alt="Logo" class="app-top__logo">
       <h1>Weather Vue.js App</h1>
       <CitySearch></CitySearch>
       <Weather></Weather>
@@ -35,7 +36,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 * {
   margin: 0;
 }
@@ -53,5 +54,9 @@ export default {
   border-radius: 4px;
   padding: 8px;
   margin-bottom: 8px;
+
+  &__logo {
+    max-width: 25%;
+  }
 }
 </style>

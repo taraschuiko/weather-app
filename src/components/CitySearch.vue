@@ -35,6 +35,8 @@ button {
   font-size: 16px;
   padding: 2px 6px;
   border: 1px solid #ccc;
+  color: #2c3e50;
+  background: #fff;
 }
 
 input {
