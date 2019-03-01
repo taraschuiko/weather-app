@@ -47,6 +47,7 @@ export default {
   color: #2c3e50;
   padding: 8px;
   max-width: 420px;
+  margin: 0 auto;
 }
 
 .app-top {
